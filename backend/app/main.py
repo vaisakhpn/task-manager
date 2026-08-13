@@ -1,11 +1,15 @@
 from fastapi import FastAPI
 
-app= FastAPI(title="Task Manager")
+from app.core.config import settings
+
+app= FastAPI(title=settings.PROJECT_NAME,
+             debug=settings.DEBUG)
 
 
 @app.get("/health")
 def health_check():
-    return{
-        "status":"ok",
-        "message":"API is running"
+   return {
+        "status": "ok",
+        "environment": settings.ENVIRONMENT,
+        "project_name": settings.PROJECT_NAME,
     }
