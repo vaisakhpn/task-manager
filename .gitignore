@@ -1,0 +1,64 @@
+# ==============================
+# Environment variables
+# ==============================
+.env
+.env.*
+!.env.example
+
+# ==============================
+# Python
+# ==============================
+__pycache__/
+*.py[cod]
+*.pyo
+*.pyd
+
+# Virtual environments
+.venv/
+venv/
+env/
+
+# Python packaging
+*.egg-info/
+dist/
+build/
+
+# ==============================
+# FastAPI / Python tooling
+# ==============================
+.pytest_cache/
+.mypy_cache/
+.ruff_cache/
+.coverage
+htmlcov/
+
+# ==============================
+# IDE / Editors
+# ==============================
+.vscode/
+.idea/
+
+# ==============================
+# OS files
+# ==============================
+.DS_Store
+Thumbs.db
+
+# ==============================
+# Node / Next.js
+# ==============================
+node_modules/
+.next/
+out/
+*.tsbuildinfo
+
+# ==============================
+# Logs
+# ==============================
+*.log
+
+# ==============================
+# Local database files
+# ==============================
+*.sqlite
+*.sqlite3
