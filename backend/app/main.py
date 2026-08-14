@@ -1,3 +1,4 @@
+from app.routes import task
 from app.routes import users
 from app.routes import auth
 from fastapi import FastAPI
@@ -9,6 +10,7 @@ app= FastAPI(title=settings.PROJECT_NAME,
 
 app.include_router(auth.router, prefix="/auth", tags=["Authentication"])
 app.include_router(users.router, prefix="/users", tags=["Users"])
+app.include_router(task.router, prefix="/tasks", tags=["Tasks"])
 
 
 
