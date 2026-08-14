@@ -6,6 +6,12 @@ class UserCreate(BaseModel):
     email: EmailStr
     password: str
 
+class UserUpdate(BaseModel):
+    email: EmailStr | None = None
+    
+class UserPasswordUpdate(BaseModel):
+    current_password: str
+    new_password: str
 
 class UserResponse(BaseModel):
     id: int
